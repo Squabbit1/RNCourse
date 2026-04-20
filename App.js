@@ -28,6 +28,8 @@ export default function App() {
     });
   }
   return (
+    <>
+    <StatusBar style='light' />
     <View style={styles.appContainer}>
       <Button title='Add New Goal' color='#5e0acc' onPress={startAddGoalHandler} />
       <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandler} />
@@ -46,12 +48,14 @@ export default function App() {
         />
       </View>
     </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
+    marginTop: 50,
     paddingTop: 50,
     paddingHorizontal: 16,
   },
